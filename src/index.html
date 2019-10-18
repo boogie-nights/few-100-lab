@@ -4,16 +4,103 @@
 <head>
     <meta charset="UTF-8">
     <title>Front End Web 100</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
 </head>
 
 <body>
-    <header>
-        <h1>Front End Web 100 Starter</h1>
-        <h2>Progressive ITU</h2>
+    <header class="container">
+        <h1>Tip Calculator</h1>
+        <h4 class="error hidden">Please enter a value greater than 0.</h2>
     </header>
-    <main>
-        
+    <main class="container">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text"
+                      id="basic-addon1">$</span>
+            </div>
+            <input type="number"
+                   class="form-control"
+                   placeholder=""
+                   aria-label=""
+                   aria-describedby="basic-addon1"
+                   id="bill-amount-input">
+        </div>
+
+        <div class="dropdown preferred-amount">
+            <button class="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                Preferred Tip Amount <span id="preferred-amount"></span>%
+            </button>
+            <div class="dropdown-menu"
+                 aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item preferred-item"
+                   href="#"
+                   data-preferred="10">10%</a>
+                <a class="dropdown-item preferred-item"
+                   href="#"
+                   data-preferred="15">15%</a>
+                <a class="dropdown-item preferred-item"
+                   href="#"
+                   data-preferred="20">20%</a>
+                <a class="dropdown-item preferred-item"
+                   href="#"
+                   data-preferred="Custom">Custom</a>
+            </div>
+        </div>
+
+        <div class="btn-group"
+             role="group"
+             aria-label="Basic example">
+            <button type="button"
+                    class="btn btn-secondary tip-button">10%</button>
+            <button type="button"
+                    class="btn btn-secondary tip-button">15%</button>
+            <button type="button"
+                    class="btn btn-secondary tip-button">20%</button>
+            <button type="button"
+                    class="btn btn-secondary tip-button">Custom</button>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text"
+                      id="basic-addon1">$</span>
+            </div>
+            <input type="number"
+                   class="form-control hidden"
+                   placeholder=""
+                   aria-label=""
+                   aria-describedby="basic-addon1"
+                   id="custom-amount-input">
+        </div>
+
+        <div class="tip-amount">You are tipping <span class="tip"></span>%</div>
+
+        <ul class="list-group">
+            <li class="list-group-item">Bill Amount: $<span id="bill-amount">100.00</span></li>
+            <li class="list-group-item">Tip Percentage: <span class="tip"></span>%</li>
+            <li class="list-group-item">Amount of tip: $<span id="tip-value-dollars">20.00</span></li>
+            <li class="list-group-item total-bill-amount">Total to be Paid: $<span id="total-bill-amount">120.00</span>
+            </li>
+        </ul>
+
     </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
