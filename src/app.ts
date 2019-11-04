@@ -12,6 +12,7 @@ let totalAmount: HTMLSpanElement;
 let errorMessage: HTMLHeadingElement;
 let preferredTipAmountEl: HTMLSpanElement;
 let preferredTipAmountChildren: NodeListOf<HTMLDivElement>;
+let customTipAmountEl: HTMLInputElement;
 
 let preferredTipAmount: string;
 export let customTipAmount: string;
@@ -26,6 +27,7 @@ export function runApp() {
     errorMessage = document.querySelector('.error') as HTMLHeadingElement;
     preferredTipAmountEl = document.querySelector('#preferred-amount') as HTMLSpanElement;
     preferredTipAmountChildren = document.querySelectorAll('.preferred-item') as NodeListOf<HTMLDivElement>;
+    customTipAmountEl = document.querySelector('custom-amount') as HTMLInputElement;
 
     loadLocalData();
 
